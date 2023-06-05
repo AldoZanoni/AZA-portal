@@ -1,0 +1,77 @@
+.cabeçalho__logo {
+    width: 90px;
+    
+}
+
+.phanton__logo {
+    width: 48px;
+    height: 48px;
+}
+
+.cabeçalho__menu-hamburguer {
+    width: 48px;
+    height: 48px;
+    background-image: url(../Assets/Menu.svg);
+    display: inline-block;
+    /* inline-block pra permitir o ajuste da altura e largura, se fosse só inline, não permitiria */
+    background-repeat: no-repeat;
+    background-position: center;
+    /* a imagem de background vai ficar repetindo pra completar o background, então tem que mandar parar, e posicionar no centro. */
+}
+
+
+
+.cabeçalho {
+    background: var(--azul-aza-gradiente);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* como o cabeçalho foi divido em duas divs, elas são os blocos que ficaram no formato flex. Com isso ficam disponíveis várias prorpiedades de flex box. Tem que pesquisar quando for usar. */
+    position: relative;
+    /* permite abre opções de movimentação nas quatro direções, mas nesse caso foi usado apenas para que o position absolute no lista-menu funcione, pois o absolute só funciona em relação ao pai se ele não for static */
+    height: 10vh;
+    
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.lista-menu {
+    display: none;
+    /* some com o elemento e faz com que ele não ocupe espaço nenhum */
+    position: absolute;
+    /* aqui vamos usar o absolute pois ele se posiciona em relação ao elemento pai, já que queremos que o menu desça logo abaixo do cabeçalho, mas pra isso o cabeçalho não pode ser static, então foi colocado relative. */
+    top: 100%;
+    /* esse moveu a lista para baixo, significa que o topo deve estar 100% depois do cabeçalho*/
+    width: 50vw;
+    /* vw é viewpor width, ficou tipo 60% da largura da tela que ele está */
+}
+
+.container__botao:checked~.lista-menu {
+    display: block;
+}
+/* quando o input do container__botao estiver checked, a lista-menu vai fazer o display: block, que é apresentar a lista em formato de bloco. */
+
+.container__botao {
+    display: none;
+}
+
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--cinza);
+}
+
+.lista-menu__link {
+    background: var(--azul-escuro);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* copiei e colei do 'Teste' do figma. não sei como que eu ia saber que tinha que copiar só isso*/
+    text-transform: uppercase;
+
+}
