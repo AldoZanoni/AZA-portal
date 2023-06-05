@@ -19,3 +19,8 @@
 .lista-rodapé__logo {
     width: 60px;
 }
+
+.rodapé__logo {
+    width: 150px;
+    height: 150px;
+}
