@@ -1,0 +1,37 @@
+.páginas {
+    background: var(--azul-claro-gradiente);
+    text-align: center;
+    padding: 5em 2em;
+    height: 50vh;
+    
+}
+
+.páginas__lista {
+    
+    display: flex;
+    flex-direction: column;
+
+    /* flex-wrap: wrap; */
+    /* wrap faz a quebra de linha */
+    justify-content: space-evenly;
+    
+}
+
+.páginas__item {
+    padding: 2em 0.5em;
+   
+}
+
+.páginas__link {
+    display: flex;
+    justify-content: center;
+    color: var(--cinza);
+    padding: 1em 1em;
+    background: var(--azul-escuro-gradiente);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 4px;
+    box-shadow: 4px 4px 8px 1px #000000;
+
+}
